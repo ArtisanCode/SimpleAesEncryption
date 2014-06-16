@@ -9,7 +9,8 @@
     <licenseUrl>https://github.com/ArtisanCode/SimpleAesEncryption/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ArtisanCode/SimpleAesEncryption</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>A library to allow you to use AES encryption with minimum effort.</summary>
+    <summary>An AES encryption library.</summary>
+    <description>A library to allow you to use AES encryption with minimum effort.</description>
     <releaseNotes>Initial version</releaseNotes>
     <tags>.NET AES Encryption</tags>
   </metadata>
