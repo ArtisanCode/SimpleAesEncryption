@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAesEncryption", "src\SimpleAesEncryption\SimpleAesEncryption.csproj", "{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C6DD140B-413D-4023-8EA6-50F9871CA803}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E0D81C72-5893-4720-BE6B-74834EF19FD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.SimpleAesEncryption", "tests\Test.SimpleAesEncryption\Test.SimpleAesEncryption.csproj", "{2829C552-8959-4E0C-8994-9D6800922CC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EB753F45-BCFE-418B-9259-85E5B59E1F30}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2829C552-8959-4E0C-8994-9D6800922CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2829C552-8959-4E0C-8994-9D6800922CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2829C552-8959-4E0C-8994-9D6800922CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2829C552-8959-4E0C-8994-9D6800922CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A} = {C6DD140B-413D-4023-8EA6-50F9871CA803}
+		{2829C552-8959-4E0C-8994-9D6800922CC9} = {E0D81C72-5893-4720-BE6B-74834EF19FD5}
+	EndGlobalSection
+EndGlobal

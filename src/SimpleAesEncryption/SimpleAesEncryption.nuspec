@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >  <metadata>
+    <id>Simple.AES</id>
+    <version>$version$</version>
+    <title>Simple AES encryption</title>
+    <authors>Tom Kuhn</authors>
+    <owners>Artisan Code</owners>
+    <iconUrl>https://avatars3.githubusercontent.com/u/7647107</iconUrl>
+    <licenseUrl>https://github.com/ArtisanCode/SimpleAesEncryption/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ArtisanCode/SimpleAesEncryption</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>A library to allow you to use AES encryption with minimum effort.</summary>
+    <releaseNotes>Initial version</releaseNotes>
+    <tags>.NET AES Encryption</tags>
+  </metadata>
+</package>
