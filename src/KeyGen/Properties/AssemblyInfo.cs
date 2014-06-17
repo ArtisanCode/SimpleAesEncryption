@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SimpleAesEncryption")]
-[assembly: AssemblyDescription("A library to allow you to use AES encryption with minimum effort")]
+[assembly: AssemblyTitle("KeyGen")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ArtisanCode")]
-[assembly: AssemblyProduct("SimpleAesEncryption")]
-[assembly: AssemblyCopyright("Copyright © ArtisanCode 2014")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("KeyGen")]
+[assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ad766d4b-d193-4fd6-9acb-3f328edd7001")]
+[assembly: Guid("669b7a6e-2bf7-4d44-aef5-5076befb19f0")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -30,6 +30,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.1.*")]
+// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.1.0.0")]
 [assembly: AssemblyFileVersion("1.1.0.0")]

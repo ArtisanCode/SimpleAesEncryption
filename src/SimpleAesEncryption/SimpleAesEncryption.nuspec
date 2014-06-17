@@ -14,4 +14,8 @@
     <releaseNotes>Initial version</releaseNotes>
     <tags>.NET AES Encryption</tags>
   </metadata>
+  <files>
+    <file src="\bin\Release\Tools\KeyGen\*.dll" target="tools\KeyGen" />
+    <file src="\bin\Release\Tools\KeyGen\SimpleAES.KeyGen.exe" target="tools\KeyGen" />
+  </files>
 </package>
