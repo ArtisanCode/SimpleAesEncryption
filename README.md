@@ -11,8 +11,8 @@ The simple AES encryption library can be downloaded and installed from NuGet:
 http://www.nuget.org/packages/Simple.AES/
 
 
-Usage
------
+Configuration
+-------------
 
 Once the NuGet package has been installed, all that is required to use the tool is a few configuration changes.
 
@@ -54,4 +54,24 @@ Convert.ToBase64String(new byte[32] {
 - This key is the same key used to encrypt _and_ decrypt so if this gets compromised then you will need to re-encrypt everything that was encrypted with the compromised key. To help keep this encryption information more secure, it is **_highly recommended_** that you encrypt the `<Log4NetMessageEncryption>...</Log4NetMessageEncryption>` configuration section using a tool like [Aspnet_regiis](http://msdn.microsoft.com/en-US/library/k6h9cz8h(v=vs.100).ASPX)
 
 
-and you're done!
+Usage
+-----
+
+There are only two interfaces that this library exposes:
+
+* IMessageEncryptor (https://github.com/ArtisanCode/SimpleAesEncryption/blob/master/src/SimpleAesEncryption/IMessageEncryptor.cs)
+* IMessageDecryptor (https://github.com/ArtisanCode/SimpleAesEncryption/blob/master/src/SimpleAesEncryption/IMessageDecryptor.cs)
+
+These interfaces only expose one function each:
+
+```C#
+string Encrypt(string source);
+```
+
+```C#
+string Decrypt(string cypherText);
+```
+
+You can create instances of ```RijndaelMessageEncryptor``` and ```RijndaelMessageDecryptor``` directly by using the relevent constructors OR, you can use your favourite Dependency Injection container to manage the instansiation for you.
+
+That's all you need to know in order to start encrypting and decrypting to your heart's content!
