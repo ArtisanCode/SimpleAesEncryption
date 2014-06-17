@@ -66,7 +66,6 @@ namespace ArtisanCode.SimpleAesEncryption
             return DecryptStringFromBytes(cypherTextPrimitave, iv);
         }
 
-
         /// <summary>
         /// Decrypts the string from bytes.
         /// </summary>
@@ -128,64 +127,6 @@ namespace ArtisanCode.SimpleAesEncryption
             }
 
             return plaintext;
-        }
-
-
-        /// <summary>
-        /// Decrypts a log message.
-        /// </summary>
-        /// <param name="logMessage">The log message to decrypt.</param>
-        /// <returns>
-        /// The log message with the encrypted strings replaced with the plaintext equivalent
-        /// </returns>
-        public virtual string DecyptMessage(string logMessage)
-        {
-            if (string.IsNullOrWhiteSpace(logMessage))
-            {
-                return string.Empty;
-            }
-
-            // Determine if the log message has multiple lines e.g. is an Exception message
-            var logLines = logMessage.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-            if (logLines.Length > 1)
-            {
-                // Decrypt each line individually and join them together in the same order they appeared
-                return string.Join(Environment.NewLine, logLines.Select(x => DecryptLogLine(x)));
-            }
-
-            return DecryptLogLine(logLines.First());
-        }
-
-        /// <summary>
-        /// Decrypts the log line.
-        /// </summary>
-        /// <param name="logLine">The log line.</param>
-        /// <returns>the plaintext representation of the log line</returns>
-        public virtual string DecryptLogLine(string logLine)
-        {
-            // Assume that the message is split by spaces
-            var tokens = logLine.Split(new[] { ' ' }, StringSplitOptions.None);
-
-            for (int i = 0; i < tokens.Length; i++)
-            {
-                // Only attempt to decrypt log messages that contain the cypher / IV separator (>>)
-                if (tokens[i].Contains(CYPHER_TEXT_IV_SEPERATOR))
-                {
-                    // If the decryption succeeds, replace the encrypted string with the decrypted message
-                    try
-                    {
-                        var decryptedMessage = Decrypt(tokens[i]);
-                        logLine = logLine.Replace(tokens[i], decryptedMessage);
-                    }
-                    catch
-                    {
-                        // Do nothing: If the decryption fails, leave the encrypted string in place
-                    }
-                }
-            }
-
-            return logLine;
         }
     }
 }
