@@ -74,4 +74,8 @@ string Decrypt(string cypherText);
 
 You can create instances of ```RijndaelMessageEncryptor``` and ```RijndaelMessageDecryptor``` directly by using the relevent constructors OR, you can use your favourite Dependency Injection container to manage the instansiation for you.
 
+For an idea of how to use this library, please refer to the sample projects:
+* Simple Example - shows how to use the library in its simplest form
+* Integration with Castle whilst using a custom configuration section name to contain the encryption information
+
 That's all you need to know in order to start encrypting and decrypting to your heart's content!
