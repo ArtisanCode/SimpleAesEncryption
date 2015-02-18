@@ -15,7 +15,7 @@
     <tags>.NET AES Encryption</tags>
   </metadata>
   <files>
-    <file src="..\Tools\KeyGen\bin\release\*.dll" target="tools\KeyGen" />
-    <file src="..\Tools\KeyGen\bin\release\SimpleAES.KeyGen.exe" target="tools\KeyGen" />
+    <file src="..\KeyGen\bin\release\*.dll" target="tools\KeyGen" />
+    <file src="..\KeyGen\bin\release\SimpleAES.KeyGen.exe" target="tools\KeyGen" />
   </files>
 </package>
