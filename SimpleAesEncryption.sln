@@ -18,26 +18,56 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EB753F
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyGen", "src\KeyGen\KeyGen.csproj", "{9E3D5C62-B5BA-4213-A4DB-CB523528713C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A7C104D-61E1-4795-B7E7-AFA999DC5D52}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{65354631-B9A7-4B93-9889-6623B06B9230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleExample", "sample\SimpleExample\SimpleExample.csproj", "{47B4F4B7-BD6B-4792-8CA6-153EA4FE772B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastleWithCustomConfigSection", "sample\CastleWithCustomConfigSection\CastleWithCustomConfigSection.csproj", "{20E15878-B343-4C4B-AD5B-684DE4E30BF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2829C552-8959-4E0C-8994-9D6800922CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2829C552-8959-4E0C-8994-9D6800922CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2829C552-8959-4E0C-8994-9D6800922CC9}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{2829C552-8959-4E0C-8994-9D6800922CC9}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{2829C552-8959-4E0C-8994-9D6800922CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2829C552-8959-4E0C-8994-9D6800922CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E3D5C62-B5BA-4213-A4DB-CB523528713C}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{9E3D5C62-B5BA-4213-A4DB-CB523528713C}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{9E3D5C62-B5BA-4213-A4DB-CB523528713C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E3D5C62-B5BA-4213-A4DB-CB523528713C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B4F4B7-BD6B-4792-8CA6-153EA4FE772B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B4F4B7-BD6B-4792-8CA6-153EA4FE772B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B4F4B7-BD6B-4792-8CA6-153EA4FE772B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B4F4B7-BD6B-4792-8CA6-153EA4FE772B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E15878-B343-4C4B-AD5B-684DE4E30BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E15878-B343-4C4B-AD5B-684DE4E30BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E15878-B343-4C4B-AD5B-684DE4E30BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E15878-B343-4C4B-AD5B-684DE4E30BF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E94E1D6C-7182-491D-A5C4-79B1BE3DC48A} = {C6DD140B-413D-4023-8EA6-50F9871CA803}
+		{9E3D5C62-B5BA-4213-A4DB-CB523528713C} = {C6DD140B-413D-4023-8EA6-50F9871CA803}
 		{2829C552-8959-4E0C-8994-9D6800922CC9} = {E0D81C72-5893-4720-BE6B-74834EF19FD5}
+		{47B4F4B7-BD6B-4792-8CA6-153EA4FE772B} = {65354631-B9A7-4B93-9889-6623B06B9230}
+		{20E15878-B343-4C4B-AD5B-684DE4E30BF3} = {65354631-B9A7-4B93-9889-6623B06B9230}
 	EndGlobalSection
 EndGlobal
