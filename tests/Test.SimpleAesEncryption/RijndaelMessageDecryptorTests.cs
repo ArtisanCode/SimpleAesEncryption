@@ -78,14 +78,14 @@ namespace ArtisanCode.Test.Log4NetMessageEncryptor.Encryption
         [ExpectedException(typeof(CryptographicException))]
         public void Decrypt_InvalidLengthTextSentForDecryption_ExceptionThrown()
         {
-            var result = _target.Decrypt("dGVzdCBkYXRh>>wLQO0465tJ5lxuodSSlmgg==");
+            var result = _target.Decrypt("dGVzdCBkYXRh??wLQO0465tJ5lxuodSSlmgg==");
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void Decrypt_InvalidSourceMissingCypherText_ExceptionThrown()
         {
-            var result = _target.Decrypt(">>wLQO0465tJ5lxuodSSlmgg==");
+            var result = _target.Decrypt("??wLQO0465tJ5lxuodSSlmgg==");
         }
 
         [TestMethod]
@@ -99,7 +99,7 @@ namespace ArtisanCode.Test.Log4NetMessageEncryptor.Encryption
         [ExpectedException(typeof(ArgumentException))]
         public void Decrypt_InvalidSourceMissingIV_ExceptionThrown()
         {
-            var result = _target.Decrypt("dGVzdCBkYXRh>>");
+            var result = _target.Decrypt("dGVzdCBkYXRh??");
         }
 
         [TestMethod]
@@ -133,7 +133,7 @@ namespace ArtisanCode.Test.Log4NetMessageEncryptor.Encryption
         [TestMethod]
         public void DecryptMessage_ValidSingleLineLogMessage_DecryptedSucessfully()
         {
-            string logMessage = "2014-05-21 21:31:10,381 [10] FATAL MessageEncryptorExample [(null)] - 5njRbMIJh57yuCkLLBES4g==>>Pxq+S3xzyNi9gi1GqpQLpg==";
+            string logMessage = "2014-05-21 21:31:10,381 [10] FATAL MessageEncryptorExample [(null)] - 5njRbMIJh57yuCkLLBES4g==??Pxq+S3xzyNi9gi1GqpQLpg==";
 
             string result = _target.DecyptMessage(logMessage);
 
@@ -144,8 +144,8 @@ namespace ArtisanCode.Test.Log4NetMessageEncryptor.Encryption
         [TestMethod]
         public void DecryptMessage_ValidMultiLineLogMessage_DecryptedSucessfully()
         {
-            string logMessage = @"2014-05-21 21:31:10,383 [10] FATAL MessageEncryptorExample [(null)] - 60hSSiApq0s8Jf4Qo/lYOvCMMXzVwX9NzvZCinWEhN4=>>907wl9xaHUWmIdl6pCDbsA==
-iGYN8z6B06FIxZwYkJ5NgbAow9wxLH0nh/CITvmi3s4j6KKWl7mkrSI11lkgy+aQbtUEDDYL4OzLKAZvSjsffpdZQ6S0Z9Et1uvnD2l5OU698xcPcXBWbeROZ+20OwGM8paywcFfFA51kymjSsdGgYD+aM33/KuFztAEScoFDyTo6QPJQ/GJmQ0dlw14yri1d0twpIq6y7ht3YYrub/Q2Q==>>W62CTZ2n33vaqNcNncwL/A==";
+            string logMessage = @"2014-05-21 21:31:10,383 [10] FATAL MessageEncryptorExample [(null)] - 60hSSiApq0s8Jf4Qo/lYOvCMMXzVwX9NzvZCinWEhN4=??907wl9xaHUWmIdl6pCDbsA==
+iGYN8z6B06FIxZwYkJ5NgbAow9wxLH0nh/CITvmi3s4j6KKWl7mkrSI11lkgy+aQbtUEDDYL4OzLKAZvSjsffpdZQ6S0Z9Et1uvnD2l5OU698xcPcXBWbeROZ+20OwGM8paywcFfFA51kymjSsdGgYD+aM33/KuFztAEScoFDyTo6QPJQ/GJmQ0dlw14yri1d0twpIq6y7ht3YYrub/Q2Q==??W62CTZ2n33vaqNcNncwL/A==";
 
             string result = _target.DecyptMessage(logMessage);
 
@@ -176,7 +176,7 @@ iGYN8z6B06FIxZwYkJ5NgbAow9wxLH0nh/CITvmi3s4j6KKWl7mkrSI11lkgy+aQbtUEDDYL4OzLKAZv
 
             var encryptor = new RijndaelMessageEncryptor(testConfig);
             var secretMessage = "My ultra secret message";
-            var expectedMessageLogInfo = string.Format("{0} >>[3] Level>>Warn ", DateTime.Now.ToLongTimeString());
+            var expectedMessageLogInfo = string.Format("{0} ??[3] Level??Warn ", DateTime.Now.ToLongTimeString());
             string input = string.Format("{0}{1}", expectedMessageLogInfo, encryptor.Encrypt(secretMessage));
 
             var result = _target.DecyptMessage(input);

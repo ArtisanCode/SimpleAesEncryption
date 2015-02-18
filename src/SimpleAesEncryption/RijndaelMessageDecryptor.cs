@@ -169,7 +169,7 @@ namespace ArtisanCode.SimpleAesEncryption
 
             for (int i = 0; i < tokens.Length; i++)
             {
-                // Only attempt to decrypt log messages that contain the cypher / IV separator (>>)
+                // Only attempt to decrypt log messages that contain the cypher / IV separator (??)
                 if (tokens[i].Contains(CYPHER_TEXT_IV_SEPERATOR))
                 {
                     // If the decryption succeeds, replace the encrypted string with the decrypted message

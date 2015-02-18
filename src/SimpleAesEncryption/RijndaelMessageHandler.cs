@@ -7,7 +7,7 @@ namespace ArtisanCode.SimpleAesEncryption
 {
     public abstract class RijndaelMessageHandler
     {
-        public const string CYPHER_TEXT_IV_SEPERATOR = ">>";
+        public const string CYPHER_TEXT_IV_SEPERATOR = "??";
 
         protected string _configurationSectionName = "MessageEncryption";
 

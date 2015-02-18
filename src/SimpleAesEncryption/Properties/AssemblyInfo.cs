@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ArtisanCode")]
 [assembly: AssemblyProduct("SimpleAesEncryption")]
-[assembly: AssemblyCopyright("Copyright © ArtisanCode 2014")]
+[assembly: AssemblyCopyright("Copyright © ArtisanCode 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
