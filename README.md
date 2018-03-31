@@ -42,11 +42,22 @@ This is the heart of the library, this tells the encryption algorithm everything
 
 - The recommended KeySize value is 256 (the maximum permitted). This represents the length in bits of the encryption key. The encryption key must be _exactly_ this length.
 - Please **do not use this example key ... EVER**!! Please ensure that you generate a new encryption key in a safe and secure manner. You can find a helper program within the sample folder called KeyGen that is able to create a new symmetric key for the MessageEncryptor. 
-Generate the key by building and running KeyGen file, or by running this code:
+
+Generate the key by either:
+1. Building and running the KeyGen program
+2. Running this code:
 ```cs
 var cryptoContainer = new RijndaelManaged {KeySize = 256};//use your own keysize
             cryptoContainer.GenerateKey();
             var key = Convert.ToBase64String(cryptoContainer.Key);
+```
+3. Using the following powershell snippet to generate the key:
+```
+$container = New-Object System.Security.Cryptography.RijndaelManaged
+# defaults
+# $container.KeySize = 256
+# $container.Mode = CBC
+[Convert]::ToBase64String($container.Key)
 ```
 - This key is the same key used to encrypt _and_ decrypt so if this gets compromised then you will need to re-encrypt everything that was encrypted with the compromised key. To help keep this encryption information more secure, it is **_highly recommended_** that you encrypt the `<Log4NetMessageEncryption>...</Log4NetMessageEncryption>` configuration section using a tool like [Aspnet_regiis](http://msdn.microsoft.com/en-US/library/k6h9cz8h(v=vs.100).ASPX)
 
